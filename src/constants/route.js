@@ -4,5 +4,5 @@ export const route = {
   REVIEWS: '/reviews',
   CAST: '/cast',
   MOVIE_ID: '/:movieId',
-  NOT_FOUND: 'not-found',
+  NOT_FOUND: '/not-found',
 }

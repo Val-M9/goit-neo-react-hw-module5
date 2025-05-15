@@ -7,19 +7,14 @@ class MoviesService {
       baseURL: url.BASE,
       headers: {
         accept: 'application/json',
-        Authorization:
-          'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjMDJhYTYxZDZkMDJkNGNiNTY5OWExODAzNjFlOWMzYSIsIm5iZiI6MTY1NzA5ODcxMC4wMjcsInN1YiI6IjYyYzU1MWQ2MjQ0MTgyMDRkODI4YTMwZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.o_tJc9O6bHXSUHkHdnDlt6vuBzm6Cy7JjpQn_f0Zlo4',
+        Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_TOKEN}`,
       },
     })
   }
 
   async getTrendingMovies() {
-    try {
-      const response = await this.api.get(url.TRENDING)
-      return response
-    } catch (err) {
-      console.log(err)
-    }
+    const response = await this.api.get(url.TRENDING)
+    return response.data
   }
 }
 

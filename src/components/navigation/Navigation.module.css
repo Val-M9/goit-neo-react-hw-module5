@@ -3,16 +3,25 @@
   justify-content: flex-start;
   gap: 20px;
   align-items: center;
-  padding: 15px 15px;
+  padding: 15px 30px;
   background-color: var(--cl-header);
   box-shadow: var(--shadow-header);
   color: var(--cl-white);
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav {
+    padding: 20px 45px;
+    gap: 30px;
+    font-size: 16px;
+  }
 }
 
 .link {
   position: relative;
   text-decoration: none;
-  transition: var(--transition-ease);
+  transition: var(--trns-ease);
 }
 
 .link::after {
@@ -24,7 +33,7 @@
   height: 2px;
   border-radius: 4px;
   background-color: var(--cl-accent);
-  transition: var(--transition-ease);
+  transition: var(--trns-ease);
 }
 
 .link:hover {
@@ -37,11 +46,4 @@
 
 .link.active::after {
   width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  .nav {
-    padding: 20px 36px;
-    gap: 30px;
-  }
 }

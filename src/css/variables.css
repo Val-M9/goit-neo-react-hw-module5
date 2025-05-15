@@ -1,23 +1,22 @@
 :root {
-  /* Main colors */
+  /* Colors */
   --cl-background: #f5f5f5;
   --cl-header: #385b7e;
-  --cl-text: #2c2c2c;
-  --cl-text-light: #666666;
+  --cl-gray: #2c2c2c;
+  --cl-light-gray: #7b7b7b;
   --cl-accent: #54e5d9;
 
-  /* Additional colors */
   --cl-white: #ffffff;
-  --cl-error: #cc0303;
-  --cl-success: #28a745;
-  --cl-warning: #ffc107;
+  --cl-black: #000000;
 
   /* Shadows */
   --shadow-layout:
     -8px 0 15px -3px rgba(0, 0, 0, 0.1), 8px 0 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-header: 0px -2px 13px 3px rgba(66, 104, 142, 0.8);
-  --shadow-card: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-elevate-card:
+    0 8px 24px rgba(0, 0, 0, 0.18), 0 1.5px 4px rgba(0, 0, 0, 0.12);
 
   /* Transitions */
-  --transition-ease: all 0.3s ease;
+  --trns-ease: all 0.3s ease;
 }

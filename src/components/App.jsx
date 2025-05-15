@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import { Toaster } from 'react-hot-toast'
 import { route } from '../constants'
 import { Navigation, Loader, MainLayout } from '.'
 
@@ -12,6 +13,7 @@ const MovieDetailsPage = lazy(
 function App() {
   return (
     <MainLayout>
+      <Toaster position="top-right" />
       <Navigation />
       <Suspense fallback={<Loader />}>
         <Routes>
