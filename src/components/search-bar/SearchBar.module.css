@@ -3,8 +3,8 @@
   justify-content: center;
   align-items: center;
   padding: 15px 15px;
-  background-color: #42688e;
-  box-shadow: 0px -2px 13px 3px #42688e;
+  background-color: var(--color-header);
+  box-shadow: var(--shadow-header);
 }
 
 @media only screen and (min-width: 768px) {
@@ -25,10 +25,12 @@
 .searchInput {
   width: 100%;
   padding: 8px 50px 8px 10px;
-  border: 1px solid #fff;
+  border: 1px solid var(--color-white);
   border-radius: 6px;
   font-size: 14px;
-  color: #fff;
+  color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: var(--transition-default);
 }
 
 @media screen and (min-width: 768px) {
@@ -39,12 +41,13 @@
 }
 
 .searchInput::placeholder {
-  color: #fff;
+  color: var(--color-white);
   opacity: 0.7;
 }
 
 .searchInput:focus {
-  border-color: rgb(43, 213, 216);
+  border-color: var(--color-accent);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .searchBtn {
@@ -53,8 +56,9 @@
   top: 0;
   bottom: 0;
   padding: 0 20px 0 10px;
-  color: #fff;
+  color: var(--color-white);
   cursor: pointer;
+  transition: var(--transition-default);
 }
 
 @media screen and (min-width: 768px) {
@@ -64,5 +68,5 @@
 }
 
 .searchBtn:hover {
-  color: rgb(43, 213, 216);
+  color: var(--color-accent);
 }

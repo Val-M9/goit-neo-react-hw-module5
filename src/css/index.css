@@ -1,3 +1,5 @@
+@import './variables.css';
+
 *,
 *::before,
 *::after {
@@ -10,6 +12,7 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   font-family: sans-serif;
+  color: var(--cl-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -50,6 +53,11 @@ button {
   background: none;
   border: none;
   outline: none;
+  transition: var(--transition-default);
+}
+
+button:hover {
+  color: var(--cl-accent);
 }
 
 article,
