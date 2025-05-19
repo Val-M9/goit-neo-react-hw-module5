@@ -1,0 +1,9 @@
+.wrapper {
+  padding: 40px 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    padding: 40px 45px;
+  }
+}

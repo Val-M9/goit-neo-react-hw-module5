@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
 import toast from 'react-hot-toast'
 import { moviesService } from '../../services/movies-service'
-import { Loader, MovieList } from '../../components'
-
+import { Loader, MovieList, PageWrapper } from '../../components'
 const HomePage = () => {
   const [movies, setMovies] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
@@ -28,7 +27,7 @@ const HomePage = () => {
     return <Loader />
   }
 
-  return movies && <MovieList movies={movies} />
+  return <PageWrapper>{movies && <MovieList movies={movies} />}</PageWrapper>
 }
 
 export default HomePage

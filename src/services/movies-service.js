@@ -2,8 +2,10 @@ import axios from 'axios'
 import { url } from '../constants'
 
 class MoviesService {
+  #api
+
   constructor() {
-    this.api = axios.create({
+    this.#api = axios.create({
       baseURL: url.BASE,
       headers: {
         accept: 'application/json',
@@ -13,7 +15,16 @@ class MoviesService {
   }
 
   async getTrendingMovies() {
-    const response = await this.api.get(url.TRENDING)
+    const response = await this.#api.get(url.TRENDING)
+    return response.data
+  }
+
+  async searchMovies(query) {
+    const response = await this.#api.get(url.SEARCH_MOVIES, {
+      params: { query },
+    })
+    console.log(response)
+
     return response.data
   }
 }

@@ -2,9 +2,12 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  background-color: var(--cl-white);
   border-radius: 6px;
   box-shadow: var(--shadow-card);
   transition: var(--trns-ease);
+  max-width: 200px;
+  height: 300px;
 }
 
 .card:hover {
@@ -14,6 +17,9 @@
 
 .poster {
   border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .title {

@@ -6,13 +6,11 @@ import styles from './MovieList.module.css'
 const MovieList = ({ movies }) => {
   const location = useLocation()
 
-  console.log('location', location)
-
   return (
     <ul className={styles.wrapper}>
       {movies.map((movie) => (
         <li key={movie.id}>
-          <Link to={`${route.MOVIES}/${movie.id}`}>
+          <Link to={`${route.MOVIES}/${movie.id}`} state={location}>
             <MovieCard
               title={movie.title}
               poster={`${url.SM_IMAGE_URL}${movie.poster_path}`}
