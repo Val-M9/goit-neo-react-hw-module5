@@ -4,4 +4,7 @@ export const url = {
   SM_IMAGE_URL: 'https://image.tmdb.org/t/p/w200',
   LG_IMAGE_URL: 'https://image.tmdb.org/t/p/w400',
   SEARCH_MOVIES: 'search/movie',
+  MOVIE: 'movie/',
+  CAST: '/credits',
+  REVIEWS: '/reviews',
 }

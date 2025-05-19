@@ -12,7 +12,6 @@ const HomePage = () => {
         setIsLoading(true)
         const { results } = await moviesService.getTrendingMovies()
         setMovies(results)
-        console.log('data', results)
       } catch (error) {
         toast.error(`Error fetching movies: ${error.message}`)
       } finally {

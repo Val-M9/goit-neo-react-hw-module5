@@ -7,12 +7,30 @@
   font-weight: 500;
   text-decoration: none;
   border: 1px solid var(--cl-blue);
-  box-shadow: var(--shadow-card);
   transition: var(--trns-ease);
 }
 
 .goBackBtn:hover,
 .goBackBtn:focus {
   background: var(--cl-blue);
+  color: var(--cl-white);
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.link {
+  padding: 4px 10px;
+  font-weight: 500;
+  border: 1px solid var(--cl-blue);
+  border-radius: 4px;
+  transition: var(--trns-ease);
+}
+
+.link:hover {
+  background-color: var(--cl-blue);
   color: var(--cl-white);
 }

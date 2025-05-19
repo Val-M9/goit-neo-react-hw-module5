@@ -23,8 +23,21 @@ class MoviesService {
     const response = await this.#api.get(url.SEARCH_MOVIES, {
       params: { query },
     })
-    console.log(response)
+    return response.data
+  }
 
+  async getMovieById(id) {
+    const response = await this.#api.get(`${url.MOVIE}${id}`)
+    return response.data
+  }
+
+  async getMovieCast(id) {
+    const response = await this.#api.get(`${url.MOVIE}${id}${url.CAST}`)
+    return response.data
+  }
+
+  async getMovieReviews(id) {
+    const response = await this.#api.get(`${url.MOVIE}${id}${url.REVIEWS}`)
     return response.data
   }
 }

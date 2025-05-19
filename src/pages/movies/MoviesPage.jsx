@@ -37,8 +37,6 @@ const MoviesPage = () => {
     fetchMovies()
   }, [searchParams])
 
-  console.log('MOVIES PAGE', movies)
-
   return (
     <PageWrapper>
       <SearchBar onUpdateSearchParams={updateSearchParams} />

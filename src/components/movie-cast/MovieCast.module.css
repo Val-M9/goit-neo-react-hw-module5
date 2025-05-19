@@ -1,0 +1,73 @@
+.castList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.castItem {
+  background-color: var(--cl-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.imageWrapper {
+  position: relative;
+  padding-top: 130%;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  padding: 12px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.character {
+  font-size: 14px;
+}
+
+.character span {
+  color: var(--cl-mid-gray);
+}
+
+.noCredits {
+  text-align: center;
+  padding: 40px;
+  color: var(--cl-mid-gray);
+  font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .castList {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+    padding: 24px 0;
+  }
+
+  .info {
+    padding: 16px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .character {
+    font-size: 16px;
+  }
+}
