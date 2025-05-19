@@ -41,23 +41,25 @@ const MovieDetailsPage = () => {
       </Link>
       {isLoading && <Loader />}
       {movie && (
-        <MovieDetails
-          title={movie.title}
-          image={`${url.LG_IMAGE_URL}${movie.backdrop_path}`}
-          genres={movie.genres}
-          avgScore={movie.vote_average.toFixed(2)}
-          overview={movie.overview}
-        />
+        <>
+          <MovieDetails
+            title={movie.title}
+            image={`${url.LG_IMAGE_URL}${movie.backdrop_path}`}
+            genres={movie.genres}
+            avgScore={movie.vote_average.toFixed(2)}
+            overview={movie.overview}
+          />
+          <div className={styles.links}>
+            <Link to={route.CAST} className={styles.link}>
+              Cast
+            </Link>
+            <Link to={route.REVIEWS} className={styles.link}>
+              Reviews
+            </Link>
+          </div>
+          <Outlet />
+        </>
       )}
-      <div className={styles.links}>
-        <Link to={route.CAST} className={styles.link}>
-          Cast
-        </Link>
-        <Link to={route.REVIEWS} className={styles.link}>
-          Reviews
-        </Link>
-      </div>
-      <Outlet />
     </PageWrapper>
   )
 }
