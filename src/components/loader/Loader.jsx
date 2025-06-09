@@ -1,5 +1,5 @@
 import { DotLoader } from 'react-spinners'
-import styles from './loader.module.css'
+import styles from './Loader.module.css'
 
 const Loader = ({ isLoading }) => {
   return (
